@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D6E30E5D-6FEB-42AC-BCB3-52AA24758628}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{027B84F1-C503-4AE1-AC8E-BF6D2DA582AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{CA55AD95-53AF-4452-AF40-99190DA13164}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\run-scanner-sonarqube.ps1 = scripts\run-scanner-sonarqube.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipeline", "pipeline", "{F0D83B25-7F8C-49E2-877E-CA59B2723E38}"
+	ProjectSection(SolutionItems) = preProject
+		pipelines\git-version.yaml = pipelines\git-version.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{F596C226-5520-41EA-9CF7-8F2A536F394C}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeDesignPlus.Redis.Event.Bus", "src\CodeDesignPlus.Redis.Event.Bus\CodeDesignPlus.Redis.Event.Bus.csproj", "{53F9EEDB-34F4-440D-8FF0-E6D810A7048D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDesignPlus.Redis.Event.Bus.Test", "tests\CodeDesignPlus.Redis.Event.Bus.Test\CodeDesignPlus.Redis.Event.Bus.Test.csproj", "{40299A10-E1B1-4F49-85FE-1A1EA3CCC2ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53F9EEDB-34F4-440D-8FF0-E6D810A7048D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F9EEDB-34F4-440D-8FF0-E6D810A7048D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F9EEDB-34F4-440D-8FF0-E6D810A7048D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F9EEDB-34F4-440D-8FF0-E6D810A7048D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40299A10-E1B1-4F49-85FE-1A1EA3CCC2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40299A10-E1B1-4F49-85FE-1A1EA3CCC2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40299A10-E1B1-4F49-85FE-1A1EA3CCC2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40299A10-E1B1-4F49-85FE-1A1EA3CCC2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53F9EEDB-34F4-440D-8FF0-E6D810A7048D} = {D6E30E5D-6FEB-42AC-BCB3-52AA24758628}
+		{40299A10-E1B1-4F49-85FE-1A1EA3CCC2ED} = {027B84F1-C503-4AE1-AC8E-BF6D2DA582AB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C076DB95-D00A-4B85-A4CC-B9A70BC9BFE3}
+	EndGlobalSection
+EndGlobal

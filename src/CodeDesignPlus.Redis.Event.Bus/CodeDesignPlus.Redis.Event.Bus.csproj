@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Authors>CodeDesignPlus</Authors>
+		<Description>Event-Driven Microservice with Redis Cache (Pub/Sub) </Description>
+		<PackageProjectUrl>https://github.com/codedesignplus/CodeDesignPlus.Redis.Event.Bus</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/codedesignplus/CodeDesignPlus.Redis.Event.Bus</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageIcon>logo.png</PackageIcon>
+		<PackageTags>CodeDesignPlus SDK</PackageTags>
+		<Copyright>© CodeDesignPlus. All rights reserved.</Copyright>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<CodeAnalysisRuleSet>..\..\.sonarlint\codedesignplus.redis.event.bus.keycsharp.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>..\..\docs\CSharp Doc\CodeDesignPlus.Redis.Event.Bus.xml</DocumentationFile>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+	  <AdditionalFiles Include="..\..\.sonarlint\codedesignplus.redis.event.bus.key\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <None Include="..\..\logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Include="CodeDesignPlus.Event.Bus" Version="1.0.11" />
+	  <PackageReference Include="CodeDesignPlus.Redis" Version="1.0.11" />
+	</ItemGroup>
+
+</Project>
