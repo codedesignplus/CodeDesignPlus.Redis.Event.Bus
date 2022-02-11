@@ -10,10 +10,8 @@
 		<PackageIcon>logo.png</PackageIcon>
 		<PackageTags>CodeDesignPlus SDK</PackageTags>
 		<Copyright>© CodeDesignPlus. All rights reserved.</Copyright>
-		<PackageLicenseFile>..\..\LICENSE.md</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<CodeAnalysisRuleSet>..\..\.sonarlint\codedesignplus.redis.event.bus.keycsharp.ruleset</CodeAnalysisRuleSet>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 
 
