@@ -10,8 +10,9 @@
 		<PackageIcon>logo.png</PackageIcon>
 		<PackageTags>CodeDesignPlus SDK</PackageTags>
 		<Copyright>© CodeDesignPlus. All rights reserved.</Copyright>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<CodeAnalysisRuleSet>..\..\.sonarlint\codedesignplus.redis.event.bus.keycsharp.ruleset</CodeAnalysisRuleSet>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 	</PropertyGroup>
 
 
@@ -21,23 +22,27 @@
 
 
 	<ItemGroup>
-	  <AdditionalFiles Include="..\..\.sonarlint\codedesignplus.redis.event.bus.key\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+		<AdditionalFiles Include="..\..\.sonarlint\codedesignplus.redis.event.bus.key\CSharp\SonarLint.xml" Link="SonarLint.xml" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
-	  <None Include="..\..\logo.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	  <None Include="..\..\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Include="..\..\LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
-	
+
 	<ItemGroup>
-	  <PackageReference Include="CodeDesignPlus.Event.Bus" Version="1.0.11" />
-	  <PackageReference Include="CodeDesignPlus.Redis" Version="1.0.11" />
+		<PackageReference Include="CodeDesignPlus.Event.Bus" Version="1.0.11" />
+		<PackageReference Include="CodeDesignPlus.Redis" Version="1.0.11" />
 	</ItemGroup>
 
 </Project>
