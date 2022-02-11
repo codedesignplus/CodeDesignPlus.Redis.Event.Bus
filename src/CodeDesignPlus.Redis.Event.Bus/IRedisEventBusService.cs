@@ -1,15 +1,12 @@
 ﻿using CodeDesignPlus.Event.Bus.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace CodeDesignPlus.Redis.Event.Bus
 {
+    /// <summary>
+    /// This service implement the logic to publish and subscribe the events
+    /// </summary>
     public interface IRedisEventBusService : IEventBus
     {
-        Task<TResult> PublishAsync<TResult>(EventBase @event, CancellationToken token);
+
     }
 }
