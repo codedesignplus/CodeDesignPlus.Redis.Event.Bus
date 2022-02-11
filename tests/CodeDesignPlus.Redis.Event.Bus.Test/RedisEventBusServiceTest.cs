@@ -121,6 +121,24 @@ namespace CodeDesignPlus.Redis.Event.Bus.Test
         }
 
         /// <summary>
+        /// Verifies that throw ArgumentNullException when @event is null
+        /// </summary>
+        [Fact]
+        public void PublishAsyncGeneric_EventIsNull_ArgumentNullException()
+        {
+            // Arrange
+            var redisService = Mock.Of<IRedisService>();
+            var subscriptionManager = Mock.Of<ISubscriptionManager>();
+            var serviceProvider = Mock.Of<IServiceProvider>();
+            var logger = Mock.Of<ILogger<RedisEventBusService>>();
+
+            var redisEventBusService = new RedisEventBusService(redisService, subscriptionManager, serviceProvider, logger);
+
+            // Act & Arc
+            Assert.ThrowsAsync<ArgumentNullException>(() => redisEventBusService.PublishAsync<long>(null, CancellationToken.None));
+        }
+
+        /// <summary>
         /// Verifies that invoke method publish of <see cref="ISubscriber"/>
         /// </summary>
         [Theory]
@@ -180,24 +198,6 @@ namespace CodeDesignPlus.Redis.Event.Bus.Test
             Assert.Equal(@event.Lastnames, @eventSend.Lastnames);
             Assert.Equal(@event.UserName, @eventSend.UserName);
             Assert.Equal(@event.Birthdate, @eventSend.Birthdate);
-        }
-
-        /// <summary>
-        /// Verifies that throw ArgumentNullException when @event is null
-        /// </summary>
-        [Fact]
-        public void PublishAsyncGeneric_EventIsNull_ArgumentNullException()
-        {
-            // Arrange
-            var redisService = Mock.Of<IRedisService>();
-            var subscriptionManager = Mock.Of<ISubscriptionManager>();
-            var serviceProvider = Mock.Of<IServiceProvider>();
-            var logger = Mock.Of<ILogger<RedisEventBusService>>();
-
-            var redisEventBusService = new RedisEventBusService(redisService, subscriptionManager, serviceProvider, logger);
-
-            // Act & Arc
-            Assert.ThrowsAsync<ArgumentNullException>(() => redisEventBusService.PublishAsync<long>(null, CancellationToken.None));
         }
 
         /// <summary>

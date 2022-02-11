@@ -148,10 +148,6 @@ namespace CodeDesignPlus.Redis.Event.Bus
                     this.logger.LogDebug($"The message was added successfully");
                 }
             }
-            else
-            {
-                this.logger.LogDebug($"The channel {typeof(TEvent).Name} have not subscriptions registered");
-            }
         }
 
         /// <summary>
